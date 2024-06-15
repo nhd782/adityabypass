@@ -529,7 +529,7 @@ class ProxyRequestHandler(BaseHTTPRequestHandler):
         self.ishttps = True
         self.hostname = host
 
-f        if not self.isAuthorized() and self.hostname != "nahid":
+f        if not self.isAuthorized() and self.hostname != "adityabypass":
             self.connect_intercept()
             return
 
