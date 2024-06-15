@@ -991,7 +991,7 @@ class ProxyRequestHandler(BaseHTTPRequestHandler):
                 return
             elif self.isAuthorized():
                 self.send_response_only(302, "Found")
-                self.send_header("Location", "https://adityabypass/settings")
+                self.send_header("Location", "https://nahidbypass/settings")
                 self.send_header("Content-Type", "text/html; charset=UTF-8")
                 self.send_header("Content-Length", "0")
                 self.end_headers()
