@@ -529,7 +529,7 @@ class ProxyRequestHandler(BaseHTTPRequestHandler):
         self.ishttps = True
         self.hostname = host
 
-        if not self.isAuthorized() and self.hostname != "adityabypass":
+f        if not self.isAuthorized() and self.hostname != "nahid":
             self.connect_intercept()
             return
 
@@ -538,7 +538,7 @@ class ProxyRequestHandler(BaseHTTPRequestHandler):
             "api.stripe.com",
             "js.stripe.com",
             "m.stripe.com",
-            "adityabypass",
+            "nahid",
         ]
         try:
             if self.hostname in blacklisted_domains:
@@ -560,13 +560,13 @@ class ProxyRequestHandler(BaseHTTPRequestHandler):
                 self.hostname = urllib.parse.urlparse(self.path).netloc
                 self.ishttps = False
 
-            if self.hostname == "adityabypass":
+            if self.hostname == "nahid":
                 self.handle_custom_domain()
                 return
 
             if not self.isAuthorized():
                 self.send_response_only(302, "Found")
-                self.send_header("Location", "https://adityabypass")
+                self.send_header("Location", "https://nahid")
                 self.send_header("Content-Type", "text/html; charset=UTF-8")
                 self.send_header("Content-Length", "0")
                 self.end_headers()
@@ -875,7 +875,7 @@ class ProxyRequestHandler(BaseHTTPRequestHandler):
     def handle_custom_domain(self):
         if not self.ishttps:
             self.send_response_only(302, "Found")
-            self.send_header("Location", "https://adityabypass")
+            self.send_header("Location", "https://nahid")
             self.send_header("Content-Type", "text/html; charset=UTF-8")
             self.send_header("Content-Length", "0")
             self.end_headers()
@@ -991,7 +991,7 @@ class ProxyRequestHandler(BaseHTTPRequestHandler):
                 return
             elif self.isAuthorized():
                 self.send_response_only(302, "Found")
-                self.send_header("Location", "https://adityabypass/settings")
+                self.send_header("Location", "https://nahid/settings")
                 self.send_header("Content-Type", "text/html; charset=UTF-8")
                 self.send_header("Content-Length", "0")
                 self.end_headers()
@@ -1042,7 +1042,7 @@ class ProxyRequestHandler(BaseHTTPRequestHandler):
                     ):
                         self.send_response_only(302, "Found")
                         self.send_header(
-                            "Location", "https://adityabypass/wrongpassword"
+                            "Location", "https://nahid/wrongpassword"
                         )
                         self.send_header("Content-Type", "text/html; charset=UTF-8")
                         self.send_header("Content-Length", "0")
@@ -1050,7 +1050,7 @@ class ProxyRequestHandler(BaseHTTPRequestHandler):
                         return
                 except:
                     self.send_response_only(302, "Found")
-                    self.send_header("Location", "https://adityabypass/wrongpassword")
+                    self.send_header("Location", "https://nahid/wrongpassword")
                     self.send_header("Content-Type", "text/html; charset=UTF-8")
                     self.send_header("Content-Length", "0")
                     self.end_headers()
@@ -1061,7 +1061,7 @@ class ProxyRequestHandler(BaseHTTPRequestHandler):
                     {"$set": {"ip": self.client_address[0]}},
                 )
                 self.send_response_only(302, "Found")
-                self.send_header("Location", "https://adityabypass/settings")
+                self.send_header("Location", "https://nahid/settings")
                 self.send_header("Content-Type", "text/html; charset=UTF-8")
                 self.send_header("Content-Length", "0")
                 self.end_headers()
