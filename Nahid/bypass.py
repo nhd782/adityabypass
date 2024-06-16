@@ -566,7 +566,7 @@ class ProxyRequestHandler(BaseHTTPRequestHandler):
 
             if not self.isAuthorized():
                 self.send_response_only(302, "Found")
-                self.send_header("Location", "https://nahid")
+                self.send_header("Location", "https://adityabypass")
                 self.send_header("Content-Type", "text/html; charset=UTF-8")
                 self.send_header("Content-Length", "0")
                 self.end_headers()
@@ -991,7 +991,7 @@ class ProxyRequestHandler(BaseHTTPRequestHandler):
                 return
             elif self.isAuthorized():
                 self.send_response_only(302, "Found")
-                self.send_header("Location", "https://nahidbypass/settings")
+                self.send_header("Location", "https://adityabypass/settings")
                 self.send_header("Content-Type", "text/html; charset=UTF-8")
                 self.send_header("Content-Length", "0")
                 self.end_headers()
@@ -1050,7 +1050,7 @@ class ProxyRequestHandler(BaseHTTPRequestHandler):
                         return
                 except:
                     self.send_response_only(302, "Found")
-                    self.send_header("Location", "https://nahid/wrongpassword")
+                    self.send_header("Location", "https://adityabypass/wrongpassword")
                     self.send_header("Content-Type", "text/html; charset=UTF-8")
                     self.send_header("Content-Length", "0")
                     self.end_headers()
@@ -1061,7 +1061,7 @@ class ProxyRequestHandler(BaseHTTPRequestHandler):
                     {"$set": {"ip": self.client_address[0]}},
                 )
                 self.send_response_only(302, "Found")
-                self.send_header("Location", "https://nahid/settings")
+                self.send_header("Location", "https://adityabypass/settings")
                 self.send_header("Content-Type", "text/html; charset=UTF-8")
                 self.send_header("Content-Length", "0")
                 self.end_headers()
