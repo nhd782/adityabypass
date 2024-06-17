@@ -92,7 +92,7 @@ def register():
         "settings": {
             "bin": "",
             "proxy": "",
-            "logs": ["yellow:yellow:𝙒𝙀𝙇𝘾𝙊𝙈𝙀 𝙏𝙊 𝐍𝐀𝐇𝐈𝐃 𝘽𝙔𝙋𝘼𝙎𝙎 !!"],
+            "logs": ["yellow:yellow:Welcome To NAHID BYPASS !!"],
         },
         "role": "stable",
         "invites": {},
