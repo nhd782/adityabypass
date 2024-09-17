@@ -13,7 +13,7 @@ from subprocess import PIPE, Popen
 
 logging.getLogger("http.server").setLevel(logging.CRITICAL + 1)
 userDatabase = MongoClient(
-    "mongodb+srv://aditya:aditya@aditya.fbrbuw4.mongodb.net"
+    "mongodb+srv://doadmin:49Eip725f6j01lRK@db-mongodb-sgp1-92406-c405265f.mongo.ondigitalocean.com/admin?tls=true&authSource=admin"
 ).aditya.aditya
 
 
