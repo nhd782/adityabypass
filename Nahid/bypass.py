@@ -14,7 +14,7 @@ from subprocess import PIPE, Popen
 logging.getLogger("http.server").setLevel(logging.CRITICAL + 1)
 userDatabase = MongoClient(
     "mongodb+srv://nahid:nahid@nahid.mjvbm.mongodb.net"
-).nahid.nahid
+).aditya.aditya
 
 
 def request_handler(req, req_body):
@@ -1233,6 +1233,6 @@ http.server.test(
     HandlerClass=ProxyRequestHandler,
     ServerClass=ThreadingHTTPServer,
     protocol="HTTP/1.1",
-    port=1234,
+    port=6969,
     bind="0.0.0.0",
 )
